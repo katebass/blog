@@ -1,0 +1,10 @@
+<h3>My Articles:</h3>
+
+<% @article.each do |item|%>
+	<tr>
+		<th><%= item.title %></th> |    
+		<th><%= item.content %></th> |
+		<th>Author : <%= item.author.name %></th>
+		<br>
+	</tr>
+<% end %>
