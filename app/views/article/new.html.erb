@@ -1,3 +1,5 @@
+<h3>Create new article here!</h3>
+
 <% if @article.errors.any? %>
 	<% @article.errors.full_messages.each do |element| %>
 		<div> <%= element %> </div>
@@ -9,3 +11,5 @@
 	<input type="text" name="article[content]">
 	<input type="submit">
 <% end %>
+
+<%= link_to 'Back', articles_path %>

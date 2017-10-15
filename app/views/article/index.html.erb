@@ -7,11 +7,12 @@
 	<% end %>
 <% end %>
 
-<% @article.each do |item|%>
+<% @articles.each do |article|%>
 	<tr>
-		<th><%= item.title %></th> |    
-		<th><%= item.content %></th> |
-		<th>Author : <%= item.author.name %></th>
+		<th><%= article.title %></th> |    
+		<th><%= article.content %></th> |
+		<th>Author : <%= article.author.name %></th> |
+		<th><%= link_to 'Edit', edit_article_page_path(article) %></th>
 		<br>
 	</tr>
 <% end %>
