@@ -3,6 +3,12 @@ Rails.application.routes.draw do
   root to: 'authentication#login'
   
   get "articles" => "article#index"
+  get "articles/new" => "article#new", as: "create_article_page"
+  post "articles/create" => "article#create", as: "create_article"
+
+  get "articles/edit/:id" => "article#edit", as: "edit_article_page"
+  patch "articles/update/:id" => "article#update", as: "edit_article"
+
   get "home" => "pages#home" 
  
   get "logout" => "authentication#logout"

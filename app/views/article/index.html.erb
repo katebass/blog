@@ -1,4 +1,9 @@
 <h3>My Articles:</h3>
+<% if flash.any? %>
+	<% flash.each do |value|%>
+	<div class=""> <%=  value %> </div>
+	<% end %>
+<% end %>
 
 <% @article.each do |item|%>
 	<tr>

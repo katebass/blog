@@ -1,0 +1,13 @@
+<h3>Edit your article!</h3>
+
+<% if @article.errors.any? %>
+	<% @article.errors.full_messages.each do |element| %>
+		<div> <%= element %> </div>
+	<% end %>
+<% end %>
+
+<%= form_for @article, url: edit_article_path, method: :patch do %>
+	<input type="text" name="article[title]">
+	<input type="text" name="article[content]">
+	<input type="submit">
+<% end %>
