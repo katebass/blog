@@ -1,6 +1,9 @@
-
+<h2>Hello and welcome!</h2>
+<h3>Please, sign in before managing the blog.</h3>
 <%= form_tag(authenticate_path, method: "post") do %>
-	<input type="text" name="email">
-	<input type="text" name="password">
+	<input type="text" name="email" placeholder="Email">
+	<input type="text" name="password" placeholder="Password">
 	<input type="submit">
 <% end %>
+
+<%= link_to "View Articles", "articles"%>
